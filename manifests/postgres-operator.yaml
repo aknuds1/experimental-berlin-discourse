@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-operator
+  namespace: postgres
+  labels:
+    app: postgres-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-operator
+  template:
+    metadata:
+      labels:
+        name: postgres-operator
+        app: postgres-operator
+    spec:
+      serviceAccountName: zalando-postgres-operator
+      containers:
+      - name: postgres-operator
+        image: registry.opensource.zalan.do/acid/smoke-tested-postgres-operator:v1.0.0-21-ge39915c
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: POSTGRES_OPERATOR_CONFIGURATION_OBJECT
+          value: postgresql-operator-configuration
+          

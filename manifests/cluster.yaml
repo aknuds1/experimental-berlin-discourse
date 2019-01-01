@@ -1,0 +1,23 @@
+apiVersion: "acid.zalan.do/v1"
+kind: postgresql
+metadata:
+  name: discourse-production
+  namespace: postgres
+spec:
+  teamId: "discourse"
+  volume:
+    size: 100Gi
+  numberOfInstances: 2
+  users:
+    admin:
+    - superuser
+    - createdb
+    - login
+    discourse:
+    - login
+    - createdb
+  databases:
+    discourse: admin
+  enableShmVolume: true
+  postgresql:
+    version: "10"
