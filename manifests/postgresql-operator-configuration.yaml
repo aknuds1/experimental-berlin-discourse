@@ -26,8 +26,8 @@ configuration:
   postgres_pod_resources:
     default_cpu_request: 100m
     default_memory_request: 100Mi
-    default_cpu_limit: "3"
-    default_memory_limit: 512Mi
+    default_cpu_limit: 300m
+    default_memory_limit: 1Gi
   timeouts:
     resource_check_interval: 3s
     resource_check_timeout: 10m
@@ -44,7 +44,7 @@ configuration:
     debug_logging: true
     enable_database_access: true
   teams_api:
-    enable_teams_api: false
+    enable_teams_api: true
     team_api_role_configuration: 
       log_statement: all
     enable_team_superuser: false
