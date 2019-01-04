@@ -4,7 +4,7 @@ metadata:
   name: discourse-ingress
 spec:
   rules:
-  - host: change.me.com
+  - host: discuss.experimental.berlin
     http:
       paths:
       - backend:
@@ -12,4 +12,4 @@ spec:
           servicePort: 80
   tls:
   - hosts:
-    - change.me.com
+    - discuss.experimental.berlin
