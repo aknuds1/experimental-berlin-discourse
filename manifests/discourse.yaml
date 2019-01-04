@@ -94,3 +94,19 @@ spec:
       resources:
         requests:
           storage: 10Gi
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: discourse-ingress
+spec:
+  rules:
+  - host: discuss.experimental.berlin
+    http:
+      paths:
+      - backend:
+          serviceName: web-server
+          servicePort: 80
+  tls:
+  - hosts:
+    - discuss.experimental.berlin
