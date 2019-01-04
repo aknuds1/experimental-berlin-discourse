@@ -8,5 +8,5 @@ _root_dir = os.path.abspath(os.path.dirname(__file__))
 sys.exit(subprocess.call([
     'kubectl',
     '--kubeconfig',
-    'infrastructure/kubeconfig-discourse',
+    os.path.join(_root_dir, 'kubeconfig'),
 ] + sys.argv[1:]))
