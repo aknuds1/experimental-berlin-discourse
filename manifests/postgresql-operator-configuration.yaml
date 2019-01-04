@@ -27,7 +27,7 @@ configuration:
     default_cpu_request: 100m
     default_memory_request: 100Mi
     default_cpu_limit: 300m
-    default_memory_limit: 1Gi
+    default_memory_limit: 512Mi
   timeouts:
     resource_check_interval: 3s
     resource_check_timeout: 10m

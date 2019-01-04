@@ -19,3 +19,5 @@ spec:
   databases:
     discourse: admin
   enableShmVolume: true
+  postgresql:
+    version: "11"
