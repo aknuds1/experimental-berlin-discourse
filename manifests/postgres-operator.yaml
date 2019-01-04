@@ -19,7 +19,7 @@ spec:
       serviceAccountName: zalando-postgres-operator
       containers:
       - name: postgres-operator
-        image: aknudsen/postgres-operator:v1.0.0-45-gdacfbaa
+        image: aknudsen/postgres-operator:v1.0.0-48-gbf642df
         imagePullPolicy: IfNotPresent
         env:
         - name: POSTGRES_OPERATOR_CONFIGURATION_OBJECT
