@@ -17,7 +17,7 @@ spec:
     - login
     - createdb
   databases:
-    discourse: admin
+    discourse: discourse
   enableShmVolume: true
   postgresql:
     version: "11"
